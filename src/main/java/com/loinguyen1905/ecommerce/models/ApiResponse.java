@@ -12,7 +12,8 @@ import java.util.Collections;
 import java.util.Map;
 
 @Data
-@JsonPropertyOrder({ "httpHeaders", "statusCode", "message", "data", "otherParams" })
+@JsonPropertyOrder({ "httpHeaders", "statusCode", "otherParams", "message", "data" })
+@SuppressWarnings({ "rawtypes", "unchecked" })
 @AllArgsConstructor
 public class ApiResponse<T> {
 
@@ -20,9 +21,8 @@ public class ApiResponse<T> {
     private final int statusCode;
     private final String message;
     private final T data;
-    private final Map<String, Object> otherParams;
+    Map<String, Object> otherParams;
 
-    @SuppressWarnings({ "rawtypes", "unchecked" })
     private ApiResponse(ApiResponseBuilder builder) {
         this.httpHeaders = builder.httpHeaders;
         this.statusCode = builder.statusCode;
@@ -60,7 +60,6 @@ public class ApiResponse<T> {
             return this;
         }
     
-        @SuppressWarnings("rawtypes")
         public ResponseEntity<ApiResponse> build() {
             ApiResponse<T> apiResponse = new ApiResponse<>(this);
             return ResponseEntity.status(apiResponse.getStatusCode()).headers(apiResponse.getHttpHeaders()).body(apiResponse);

@@ -1,20 +1,32 @@
 package com.loinguyen1905.ecommerce.users.dto;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Set;
+import java.util.HashSet;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import com.loinguyen1905.ecommerce.roles.entity.Role;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateUserDto {
+public class UserDto {
     private Long userId;
+
 	private String username;
+
 	private String password;
+
 	private String email;
+
 	private String phone;
-	private boolean active = true;
-	// private Set<Role> roles = new HashSet<>();
+	
+	private Set<Role> roles = new HashSet<>();
 	// private AddressDTO address;
 	// private CartDTO cart;
 }
