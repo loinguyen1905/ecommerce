@@ -1,4 +1,5 @@
-package com.loinguyen1905.ecommerce.users;
+package com.loinguyen1905.ecommerce.shops;
+
 
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,19 +19,8 @@ import com.loinguyen1905.ecommerce.users.dto.UserDto;
 @RequestMapping("/api/v1/users/")
 @SuppressWarnings("rawtypes")
 // @SecurityRequirement(name = "E-Commerce Application")
-public class UserController {
+public class ShopController {
 
-    @Autowired
-	private UserService userService;
-
-	
-    @Autowired
-    private ResponseBuilder responseBuilder;
     
-	@PostMapping("")
-	public ResponseEntity<ApiResponse> register(@RequestBody UserDto userDto) throws BadRequestException{
-		userDto = this.userService.registerUser(userDto);
-		return responseBuilder.buildResponse(HttpStatus.CREATED.value(),"Create a new user", userDto);
-	}
 
 }

@@ -1,4 +1,4 @@
-package com.loinguyen1905.ecommerce.users.dto;
+package com.loinguyen1905.ecommerce.carts.dto;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -15,7 +15,7 @@ import com.loinguyen1905.ecommerce.roles.entity.Role;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+public class CartDto {
     private Long userId;
 
 	private String username;

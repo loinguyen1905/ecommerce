@@ -1,4 +1,4 @@
-package com.loinguyen1905.ecommerce.users;
+package com.loinguyen1905.ecommerce.cartItems;
 
 import org.apache.coyote.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,7 @@ import com.loinguyen1905.ecommerce.users.dto.UserDto;
 @RequestMapping("/api/v1/users/")
 @SuppressWarnings("rawtypes")
 // @SecurityRequirement(name = "E-Commerce Application")
-public class UserController {
+public class CartItemController {
 
     @Autowired
 	private UserService userService;

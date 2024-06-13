@@ -1,8 +1,8 @@
-package com.loinguyen1905.ecommerce.users;
+package com.loinguyen1905.ecommerce.carts;
 
 import com.loinguyen1905.ecommerce.users.dto.UserDto;
 
-public interface UserService {
+public interface CartService {
     UserDto registerUser(UserDto userDTO);
 	
 	// UserResponse getAllUsers(Integer pageNumber, Integer pageSize, String sortBy, String sortOrder);

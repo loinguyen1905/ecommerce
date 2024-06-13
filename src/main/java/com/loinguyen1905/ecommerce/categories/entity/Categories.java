@@ -1,4 +1,4 @@
-package com.loinguyen1905.ecommerce.users.entity;
+package com.loinguyen1905.ecommerce.categories.entity;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class User implements Serializable {
+public class Categories implements Serializable {
     
     private static final long serialVersionUID = -297553281792804396L;
 

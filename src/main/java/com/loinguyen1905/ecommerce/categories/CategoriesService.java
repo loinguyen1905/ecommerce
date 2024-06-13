@@ -1,4 +1,4 @@
-package com.loinguyen1905.ecommerce.users;
+package com.loinguyen1905.ecommerce.categories;
 
 import com.loinguyen1905.ecommerce.users.dto.UserDto;
 
