@@ -28,7 +28,7 @@ public class UserController {
     private ResponseBuilder responseBuilder;
     
 	@PostMapping("")
-	public ResponseEntity<ApiResponse> register(@RequestBody UserDto userDto) throws BadRequestException{
+	public ResponseEntity<ApiResponse> register(@RequestBody UserDto userDto) throws BadRequestException {
 		userDto = this.userService.registerUser(userDto);
 		return responseBuilder.buildResponse(HttpStatus.CREATED.value(),"Create a new user", userDto);
 	}
